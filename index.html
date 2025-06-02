@@ -1,117 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0f0f1a;
-            color: #e0e0ff;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-        header {
-            background: linear-gradient(to right, #0ff, #09f);
-            color: #000;
-            padding: 1rem 2rem;
-            text-align: center;
-            font-size: 2rem;
-            letter-spacing: 2px;
-        }
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+    header {
+      background: linear-gradient(90deg, #0ff, #08f);
+      padding: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      color: #000;
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: #111;
+      padding: 1rem 0;
+    }
 
-        .card {
-            background-color: #1a1a2e;
-            border: 1px solid #0ff;
-            border-radius: 10px;
-            padding: 1rem;
-            transition: transform 0.2s ease;
-        }
+    nav a {
+      color: #0ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-            .card:hover {
-                transform: scale(1.03);
-                box-shadow: 0 0 15px #0ff;
-            }
+    .page {
+      display: none;
+      padding: 2rem;
+    }
 
-            .card img {
-                width: 100%;
-                border-radius: 8px;
-                margin-bottom: 1rem;
-            }
+    .active {
+      display: block;
+    }
 
-        a {
-            color: #0ff;
-            text-decoration: none;
-        }
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
 
-            a:hover {
-                text-decoration: underline;
-            }
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      border: 3px solid #0ff;
+    }
 
-        h2 {
-            margin-top: 2rem;
-            border-left: 4px solid #0ff;
-            padding-left: 1rem;
-        }
-    </style>
+    .skills {
+      max-width: 600px;
+      margin-top: 1rem;
+      background: #111;
+      padding: 1rem;
+      border-left: 3px solid #0ff;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: #111;
+      padding: 1rem;
+      border: 1px solid #0ff;
+    }
+
+    .project-card h3 {
+      color: #0ff;
+    }
+
+    .project-images img {
+      width: 100%;
+      margin-top: 1rem;
+      border: 1px solid #0ff;
+    }
+  </style>
 </head>
 <body>
-    <header>My Game Projects</header>
-    <div class="container">
-        <section class="grid">
-            <a href="#glitch" class="card">
-                <h3>Glitch</h3>
-                <img src="/mnt/data/dc36dc29-105d-41d0-9a07-5dedc7a50d51.png" alt="Glitch Cover" />
-            </a>
-            <a href="#reflection" class="card">
-                <h3>Reflection</h3>
-                <img src="/mnt/data/d916295d-6b0a-45b3-8680-8dfd55e3e460.png" alt="Reflection Cover" />
-            </a>
-            <a href="#sinsational" class="card">
-                <h3>Sinsational</h3>
-                <img src="/mnt/data/d1508147-d2eb-438f-954a-f42576a8dea5.png" alt="Sinsational Cover" />
-            </a>
-        </section>
+  <header>My Cyberpunk Portfolio</header>
 
-        <section id="glitch">
-            <h2>Glitch</h2>
-            <p>You control a robot starting from the bottom of a glitching building. A scientist, captive at the top, can guide you—until the AI enemy "Glitch" interrupts. Solve puzzles fast to survive.</p>
-            <div class="grid">
-                <img src="/mnt/data/2e941c6d-1cfb-4c21-b6a8-50c4c58b880e.png" alt="Glitch Image 1" />
-                <img src="/mnt/data/28be66ff-4873-4769-8d89-ac37d86614e4.png" alt="Glitch Image 2" />
-            </div>
-        </section>
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('projects')">Projects</a>
+  </nav>
 
-        <section id="reflection">
-            <h2>Reflection</h2>
-            <p>An emotional puzzle-platformer where you switch between light and shadow versions of the character. Each dimension reveals hidden truths as you reflect on your past to heal.</p>
-            <div class="grid">
-                <img src="/mnt/data/fbbc9b04-f19a-4536-9a94-4f887d3f9195.png" alt="Reflection Image 1" />
-                <img src="/mnt/data/0b69eea5-3037-47f8-9f7f-7f052bebe4d5.png" alt="Reflection Image 2" />
-            </div>
-        </section>
-
-        <section id="sinsational">
-            <h2>Sinsational</h2>
-            <p>Explore a surreal world built around the seven deadly sins. Solve moral dilemmas and test your ethics in an immersive narrative adventure that reacts to every choice you make.</p>
-            <div class="grid">
-                <img src="/mnt/data/5c20bb4c-dd6f-4561-a99d-4c6c1c93eaf6.png" alt="Sinsational Image 1" />
-                <img src="/mnt/data/XSy2LtUXmo2LNQNCTWUnu1" alt="Sinsational Image 2" />
-            </div>
-        </section>
+  <div id="home" class="page active">
+    <div class="profile">
+      <!-- Insert your profile image here -->
+      <img src="YOUR_PROFILE_IMAGE_PATH_HERE" alt="Profile Picture" />
+      <h2>Your Name</h2>
+      <p>Hello! I'm a game developer with a passion for immersive experiences, cyberpunk aesthetics, and puzzle mechanics.</p>
+      <div class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>Unity / Unreal Engine</li>
+          <li>C# / JavaScript</li>
+          <li>Game Design & UI/UX</li>
+          <li>Storytelling</li>
+          <li>Visual Scripting</li>
+        </ul>
+      </div>
     </div>
+  </div>
+
+  <div id="projects" class="page">
+    <h2>Game Projects</h2>
+    <div class="projects-grid">
+      <!-- Glitch -->
+      <div class="project-card">
+        <h3>Glitch</h3>
+        <p>A cyberpunk-themed puzzle game where a robot and a scientist attempt to escape a glitching facility controlled by a rogue AI.</p>
+        <!-- Add Glitch images here -->
+        <div class="project-images">
+          <img src="GLITCH_IMAGE_1_PATH" alt="Glitch screenshot 1" />
+          <img src="GLITCH_IMAGE_2_PATH" alt="Glitch screenshot 2" />
+        </div>
+      </div>
+
+      <!-- Reflection -->
+      <div class="project-card">
+        <h3>Reflection</h3>
+        <p>A narrative-driven game exploring duality and self-discovery through reflective puzzles and mirror mechanics.</p>
+        <!-- Add Reflection images here -->
+        <div class="project-images">
+          <img src="REFLECTION_IMAGE_1_PATH" alt="Reflection screenshot 1" />
+          <img src="REFLECTION_IMAGE_2_PATH" alt="Reflection screenshot 2" />
+        </div>
+      </div>
+
+      <!-- Sinsational -->
+      <div class="project-card">
+        <h3>Sinsational</h3>
+        <p>A stylized game based on the seven deadly sins where players navigate psychological and symbolic challenges.</p>
+        <!-- Add Sinsational images here -->
+        <div class="project-images">
+          <img src="SINSATIONAL_IMAGE_1_PATH" alt="Sinsational screenshot 1" />
+          <img src="SINSATIONAL_IMAGE_2_PATH" alt="Sinsational screenshot 2" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
