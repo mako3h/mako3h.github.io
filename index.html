@@ -3,206 +3,115 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reid Playter | Game Designer</title>
+    <title>Game Portfolio</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f0f1a;
+            color: #e0e0ff;
         }
 
         header {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            padding: 2rem 1rem;
+            background: linear-gradient(to right, #0ff, #09f);
+            color: #000;
+            padding: 1rem 2rem;
             text-align: center;
+            font-size: 2rem;
+            letter-spacing: 2px;
         }
 
-            header h1 {
-                margin: 0;
-                font-size: 2.5rem;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: #1a1a2e;
+            border: 1px solid #0ff;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: transform 0.2s ease;
+        }
+
+            .card:hover {
+                transform: scale(1.03);
+                box-shadow: 0 0 15px #0ff;
             }
 
-            header p {
-                margin: 0.5rem 0 0;
-                font-size: 1.2rem;
-            }
-
-        nav {
-            background-color: #34495e;
-            display: flex;
-            justify-content: center;
-            padding: 0.5rem 0;
-        }
-
-            nav a {
-                color: #ecf0f1;
-                margin: 0 1rem;
-                text-decoration: none;
-                font-weight: bold;
-            }
-
-                nav a:hover {
-                    text-decoration: underline;
-                }
-
-        main {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        section {
-            margin-bottom: 2rem;
-        }
-
-            section h2 {
-                border-bottom: 2px solid #2980b9;
-                padding-bottom: 0.5rem;
+            .card img {
+                width: 100%;
+                border-radius: 8px;
                 margin-bottom: 1rem;
-                color: #2980b9;
             }
 
-        .about p {
-            line-height: 1.6;
+        a {
+            color: #0ff;
+            text-decoration: none;
         }
 
-        .skills ul {
-            list-style-type: square;
-            columns: 2;
-            -webkit-columns: 2;
-            -moz-columns: 2;
+            a:hover {
+                text-decoration: underline;
+            }
+
+        h2 {
+            margin-top: 2rem;
+            border-left: 4px solid #0ff;
             padding-left: 1rem;
-        }
-
-        .projects .project {
-            background-color: #ecf0f1;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-left: 5px solid #2980b9;
-        }
-
-        .contact form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact label {
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-
-        .contact input, .contact textarea {
-            padding: 0.5rem;
-            border: 1px solid #bdc3c7;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        .contact button {
-            margin-top: 1rem;
-            padding: 0.75rem;
-            background-color: #2980b9;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-
-            .contact button:hover {
-                background-color: #3498db;
-            }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #2c3e50;
-            color: #ecf0f1;
-        }
-
-        @media (max-width: 600px) {
-            .skills ul {
-                columns: 1;
-            }
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Reid Playter</h1>
-        <p>Game Designer</p>
-    </header>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <main>
-        <section id="about" class="about">
-            <h2>About Me</h2>
-            <p>
-                As a graduate from Ontario Tech University specializing in game design, I am dedicated to crafting engaging and immersive player experiences. I am highly organized, detail-oriented, and passionate about designing mechanics, systems, and levels that captivate players and enhance gameplay. My academic and personal projects have allowed me to develop strong problem-solving skills and a deep understanding of player psychology.
-            </p>
-            <p>
-                I am eager to apply my knowledge and creativity to hands-on opportunities where I can refine my design skills and contribute to innovative game projects. I am seeking a role that will allow me to collaborate with industry professionals, iterate on compelling gameplay mechanics, and create meaningful experiences that push the boundaries of interactive entertainment.
-            </p>
+    <header>My Game Projects</header>
+    <div class="container">
+        <section class="grid">
+            <a href="#glitch" class="card">
+                <h3>Glitch</h3>
+                <img src="/mnt/data/dc36dc29-105d-41d0-9a07-5dedc7a50d51.png" alt="Glitch Cover" />
+            </a>
+            <a href="#reflection" class="card">
+                <h3>Reflection</h3>
+                <img src="/mnt/data/d916295d-6b0a-45b3-8680-8dfd55e3e460.png" alt="Reflection Cover" />
+            </a>
+            <a href="#sinsational" class="card">
+                <h3>Sinsational</h3>
+                <img src="/mnt/data/d1508147-d2eb-438f-954a-f42576a8dea5.png" alt="Sinsational Cover" />
+            </a>
         </section>
 
-        <section id="skills" class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Game Design</li>
-                <li>Level Design</li>
-                <li>System Design</li>
-                <li>Unity Engine</li>
-                <li>Unreal Engine</li>
-                <li>C# Programming</li>
-                <li>Team Collaboration</li>
-                <li>Project Management</li>
-            </ul>
-        </section>
-
-        <section id="projects" class="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project Title 1</h3>
-                <p>Brief description of the project, highlighting key features and your role.</p>
+        <section id="glitch">
+            <h2>Glitch</h2>
+            <p>You control a robot starting from the bottom of a glitching building. A scientist, captive at the top, can guide you—until the AI enemy "Glitch" interrupts. Solve puzzles fast to survive.</p>
+            <div class="grid">
+                <img src="/mnt/data/2e941c6d-1cfb-4c21-b6a8-50c4c58b880e.png" alt="Glitch Image 1" />
+                <img src="/mnt/data/28be66ff-4873-4769-8d89-ac37d86614e4.png" alt="Glitch Image 2" />
             </div>
-            <div class="project">
-                <h3>Project Title 2</h3>
-                <p>Brief description of the project, highlighting key features and your role.</p>
+        </section>
+
+        <section id="reflection">
+            <h2>Reflection</h2>
+            <p>An emotional puzzle-platformer where you switch between light and shadow versions of the character. Each dimension reveals hidden truths as you reflect on your past to heal.</p>
+            <div class="grid">
+                <img src="/mnt/data/fbbc9b04-f19a-4536-9a94-4f887d3f9195.png" alt="Reflection Image 1" />
+                <img src="/mnt/data/0b69eea5-3037-47f8-9f7f-7f052bebe4d5.png" alt="Reflection Image 2" />
             </div>
-            <!-- Add more projects as needed -->
         </section>
 
-        <section id="contact" class="contact">
-            <h2>Contact Me</h2>
-            <form action="mailto:Reidplayter3@gmail.com" method="post" enctype="text/plain">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required />
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
+        <section id="sinsational">
+            <h2>Sinsational</h2>
+            <p>Explore a surreal world built around the seven deadly sins. Solve moral dilemmas and test your ethics in an immersive narrative adventure that reacts to every choice you make.</p>
+            <div class="grid">
+                <img src="/mnt/data/5c20bb4c-dd6f-4561-a99d-4c6c1c93eaf6.png" alt="Sinsational Image 1" />
+                <img src="/mnt/data/XSy2LtUXmo2LNQNCTWUnu1" alt="Sinsational Image 2" />
+            </div>
         </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Reid Playter. All rights reserved.</p>
-    </footer>
-
+    </div>
 </body>
 </html>
